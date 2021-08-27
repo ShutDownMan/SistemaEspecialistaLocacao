@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Wizard-v1</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="css/raleway-font.css">
+	<link rel="stylesheet" type="text/css" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+	<!-- Jquery -->
+	<link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+	<div class="page-content" style="background-color: rgb(31, 31, 31);">
+		<div class="wizard-v1-content">
+			<div class="wizard-form">
+		        <form class="form-register" id="form-register" action="#" method="post">
+		        	<div id="form-total">
+		        		<!-- SECTION 1 -->
+			            <h2>
+			            	<span class="step-icon"><i class="zmdi zmdi-money-box"></i></span>
+			            	<span class="step-number">Passo 1</span>
+			            	<span class="step-text">Dados da Dívida</span>
+			            </h2>
+			            <section>
+			                <div class="inner">
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<label for="meses_atrasados">Meses de Atraso*</label>
+										<input type="date" class="form-control" id="meses_atrasados" name="meses_atrasados" required>
+									</div>
+									<div class="form-holder form-holder-2">
+										<label for="valor_aluguel">Valor Aluguel*</label>
+										<input type="text" placeholder="R$ Valor em Reais" class="form-control" id="valor_aluguel" name="valor_aluguel" required>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<label for="juros_moratorios">Juros Moratórios*</label>
+										<input type="text" placeholder="Valor em %" class="form-control" id="juros_moratorios" name="juros_moratorios" required >
+									</div>
+									<div class="form-holder">
+										<label for="multa_moratoria">Multa Moratórios*</label>
+										<input type="text" placeholder="Valor em %" class="form-control" id="multa_moratoria" name="multa_moratoria" required >
+									</div>
+								</div>
+								
+								<div class="form-row">
+									<div class="form-holder">
+										<label for="valor_benfeitoria">Valor Benfeitoria Necessária</label>
+										<input type="text" placeholder="R$ Valor em Reais" class="form-control" id="valor_benfeitoria" name="valor_benfeitoria"z >
+									</div>
+									<div class="form-holder">
+									</div>
+								</div>
+
+							</div>
+			            </section>
+						<!-- SECTION 2 -->
+			            <h2>
+			            	<span class="step-icon"><i class="zmdi zmdi-label"></i></span>
+			            	<span class="step-number">Step 2</span>
+			            	<span class="step-text">Dados da Renda</span>
+			            </h2>
+			            <section>
+			                <div class="inner">
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<label for="renda_valor">Renda</label>
+										<input type="text" placeholder="R$ Valor em Reais" class="form-control" id="renda_valor" name="renda_valor"z >
+									</div>
+								</div>
+							</div>
+			            </section>
+			            <!-- SECTION 3 -->
+			            <h2>
+			            	<span class="step-icon"><i class="zmdi zmdi-receipt"></i></span>
+			            	<span class="step-number">Step 3</span>
+			            	<span class="step-text">Resultados Finais</span>
+			            </h2>
+			            <section>
+			                <div class="inner">
+			                	<h3>Comfirm Details</h3>
+								<div class="form-row table-responsive">
+									<table class="table">
+										<tbody>
+											<tr class="space-row">
+												<th>Dívida:</th>
+												<td id="divida-val"></td>
+											</tr>
+											<tr class="space-row">
+												<th>Abusividade Juros:</th>
+												<td id="abusividade_juros-val"></td>
+											</tr>
+											<tr class="space-row">
+												<th>Abusividade Multa:</th>
+												<td id="abusividade_multa-val"></td>
+											</tr>
+											<tr class="space-row">
+												<th>Considerando Benfeitorias:</th>
+												<td id="benfeitoria-val"></td>
+											</tr>
+											<tr class="space-row">
+												<th>Divida Proposta:</th>
+												<td id="divida_proposta-val"></td>
+											</tr>
+											<tr class="space-row">
+												<th>Parcelamento Recomendado:</th>
+												<td id="parcelamento_recomendado-val"></td>
+											</tr>
+											<tr class="space-row">
+												<th>Parcelamentos opicionais:</th>
+												<td id="parcelamentos_opcionais-val"></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+			            </section>
+		        	</div>
+		        </form>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+	<script src="js/jquery.steps.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
